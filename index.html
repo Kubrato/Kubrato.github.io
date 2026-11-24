@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kübra Topçuoğlu</title>
+  <meta name="description" content="Kübra Topçuoğlu, MSc Digital Humanities student at the University of Bologna and former business analyst. Requirements, process modelling and AI agents for digitisation workflows.">
+  <meta property="og:title" content="Kübra Topçuoğlu">
+  <meta property="og:description" content="Requirements, process modelling and AI agents for digitisation workflows. Based in Bologna.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Albert+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="#">Kübra Topçuoğlu</a>
+  <nav aria-label="Main">
+    <a href="#education">Education</a>
+    <a href="#thesis">Thesis</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-cv" href="cv.pdf">CV</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="hero-hello">Hi, I'm</p>
+      <h1>Kübra Topçuoğlu</h1>
+      <p class="hero-sub">I'm doing an MSc in Digital Humanities and Digital Knowledge at the University of Bologna. Before that I spent almost two years as a business analyst at a software R&amp;D company in Ankara. My thesis tests whether AI agents can take over the quality checks in a large digitisation project.</p>
+      <p class="hero-open">Open to opportunities in Italy and abroad.</p>
+      <div class="hero-actions">
+        <a class="btn btn-dark" href="mailto:kubra34644@gmail.com">Email me</a>
+        <a class="btn" href="cv.pdf">Download CV</a>
+        <a class="plain" href="https://www.linkedin.com/in/k%C3%BCbra-top%C3%A7uo%C4%9Flu">LinkedIn</a>
+        <a class="plain" href="https://github.com/Kubrato">GitHub</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <img class="photo" src="img/photo.jpg" alt="Portrait of Kübra Topçuoğlu" width="630" height="756">
+      <dl class="facts">
+        <div><dt>Based in</dt><dd>Bologna, Italy</dd></div>
+        <div><dt>Nationality</dt><dd>Turkish</dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+393520073732">+39 352 007 3732</a></dd></div>
+        <div><dt>Languages</dt><dd>Turkish (native), English (C1), Italian (A2)</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <!-- EDUCATION -->
+  <section id="education" class="wrap section">
+    <p class="kicker">Education</p>
+    <div class="edu-grid">
+      <article class="school">
+        <img src="img/unibo.svg" alt="University of Bologna seal" width="72" height="72">
+        <div>
+          <p class="school-when">Sep 2025 to 2027 (expected)</p>
+          <h3>MSc Digital Humanities and Digital Knowledge</h3>
+          <p class="school-where">University of Bologna, Italy</p>
+          <p>Thesis on AI agents as quality-assurance supervisors in a digitisation workflow, supervised by Prof. Paolo Bonora. Courses include Machine Learning for the Humanities, Project Management and Software Engineering for Cultural Heritage, Network Analysis, Computational Management of Data and Natural Language Processing.</p>
+        </div>
+      </article>
+      <article class="school">
+        <img src="img/metu.svg" alt="Middle East Technical University logo" width="72" height="58">
+        <div>
+          <p class="school-when">Sep 2019 to Jul 2024</p>
+          <h3>BSc Computer Education and Instructional Technology</h3>
+          <p class="school-where">Middle East Technical University (METU), Ankara</p>
+          <p>Graduated with honours, CGPA 3.35/4.00. Coursework centred on process analysis, software design and educational applications. Three professors named me the top student in the department.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- THESIS -->
+  <section id="thesis" class="wrap section">
+    <p class="kicker">What I'm working on now</p>
+    <h2>Towards an agentic digitisation workflow</h2>
+    <p class="lede">My MSc thesis, on the Zeri auction catalogues project. About 1,600 catalogues and 200,000 images went through a workflow in which people checked every step and decided where each catalogue went next.</p>
+
+    <div class="case">
+      <div class="case-col">
+        <h3>The question</h3>
+        <p>Can AI models, used as they are with no retraining, make those checks and routing decisions well enough to replace the human step?</p>
+      </div>
+      <div class="case-col">
+        <h3>What I'm doing</h3>
+        <p>I'm modelling the workflow step by step, with each step's inputs, outputs and requirements. For every human check I design a few-shot, in-context agent that sees the same material and has to make the same call.</p>
+      </div>
+      <div class="case-col">
+        <h3>How it gets tested</h3>
+        <p>The project is finished, so the human decisions and workflow logs already exist. I compare each agent decision with the catalogue structures people validated.</p>
+      </div>
+    </div>
+
+    <figure class="bpmn">
+      <svg viewBox="0 0 760 210" role="img" aria-labelledby="bpmn-t bpmn-d">
+        <title id="bpmn-t">One workflow step, modelled in BPMN</title>
+        <desc id="bpmn-d">A catalogue batch arrives, the step produces output, an agent check replaces the human check, and a gateway sends the batch either to the next step or back for rework. The original human decision is kept as the reference to score the agent.</desc>
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1f4637"/></marker>
+        </defs>
+        <g class="b-flow">
+          <path d="M44 80 H86" marker-end="url(#arr)"/>
+          <path d="M206 80 H262" marker-end="url(#arr)"/>
+          <path d="M402 80 H452" marker-end="url(#arr)"/>
+          <path d="M502 80 H600" marker-end="url(#arr)"/>
+          <path d="M477 105 V128 H147 V110" marker-end="url(#arr)"/>
+          <path d="M332 108 V150" class="assoc"/>
+        </g>
+        <circle cx="26" cy="80" r="17" class="b-start"/>
+        <rect x="88" y="52" width="118" height="56" rx="10" class="b-task"/>
+        <text x="147" y="77" class="b-t">run step</text>
+        <text x="147" y="94" class="b-s">e.g. split, crop</text>
+        <rect x="264" y="52" width="138" height="56" rx="10" class="b-task b-agent"/>
+        <text x="333" y="77" class="b-t">agent check</text>
+        <text x="333" y="94" class="b-s">was a person</text>
+        <path d="M477 55 L502 80 L477 105 L452 80 Z" class="b-gate"/>
+        <text x="477" y="86" class="b-t">×</text>
+        <text x="550" y="70" class="b-s">pass</text>
+        <text x="215" y="144" class="b-s">fail: rework</text>
+        <rect x="602" y="52" width="118" height="56" rx="10" class="b-task"/>
+        <text x="661" y="84" class="b-t">next step</text>
+        <path d="M272 150 H382 L392 160 V196 H272 Z" class="b-data"/>
+        <text x="332" y="172" class="b-s">past human</text>
+        <text x="332" y="187" class="b-s">decision</text>
+      </svg>
+      <figcaption>One step of the workflow in BPMN. The human decision from the original project stays attached as the answer key.</figcaption>
+    </figure>
+
+    <p class="note">Thesis internship at /DH.arc (Digital Humanities Advanced Research Centre, University of Bologna) planned for February to July 2027.</p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section band">
+    <div class="wrap">
+      <p class="kicker">Work experience</p>
+      <h2>Business analyst at Anayurt Savunma ve Teknoloji</h2>
+      <p class="lede">Ankara, November 2023 to August 2025. A defence and technology R&amp;D company. I was the person between the business side and the software engineers.</p>
+
+      <div class="exp-grid">
+        <ul class="exp-list">
+          <li>Gathered requirements from business units and wrote them up so UI/UX designers and R&amp;D engineers could build from them.</li>
+          <li>Wrote the planning-phase SDLC document for a software project delivered to BTK, Turkey's ICT authority.</li>
+          <li>Managed a TÜBİTAK-supported R&amp;D project in Jira on a waterfall lifecycle, keeping tasks and documentation current.</li>
+          <li>Led the process analysis and improvement work for one of Turkey's main defence fairs.</li>
+          <li>Presented technical project details to clients from Singapore and China and brought their feedback back to senior management.</li>
+          <li>Worked with a Dutch consultancy on product management for the Arginix software product.</li>
+        </ul>
+
+        <div class="exp-earlier">
+          <h3>Before that</h3>
+          <dl>
+            <dt>Diatics, Istanbul <span>2023, 6 months</span></dt>
+            <dd>Front-end intern. Built a website for a chemical-industry factory in React on a REST API and used Postman to find mismatches between front end and back end.</dd>
+            <dt>Etiya and Enocta, Ankara <span>2021</span></dt>
+            <dd>One-month internships: an Angular e-commerce project in a team of four, then e-learning content with Articulate, After Effects and Photoshop.</dd>
+            <dt>METU International Young Community <span>2021 to 2022</span></dt>
+            <dd>Coordinator. Organised the METU Spring Fest with a team of nine and outside partners.</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="wrap section">
+    <p class="kicker">Projects</p>
+    <h2>Other work from my studies</h2>
+
+    <div class="projects">
+      <article class="proj">
+        <p class="proj-meta">Network Analysis course &middot; team of 4 &middot; 2026</p>
+        <h3>Collaboration networks in a loan application process</h3>
+        <p>The BPI Challenge 2012 event log records who worked on each of 13,087 loan applications at a Dutch bank. Following van der Aalst and Song's social network mining, we build handover and working-together networks for 754 approved and 754 declined applications, then use QAP and permutation tests to see whether the two groups collaborate differently.</p>
+        <p class="proj-tools">Python, PM4Py, NetworkX, Gephi</p>
+        <a class="proj-link" href="https://github.com/Kubrato/network-analysis-bpi2012">Code and data on GitHub</a>
+      </article>
+
+      <article class="proj">
+        <p class="proj-meta">Knowledge Representation and Organization course &middot; 2026</p>
+        <h3>Immortalising a nation's founder</h3>
+        <p>Linked open data on the things that keep Atatürk's memory in place: Anıtkabir, the lira banknote, <i>Nutuk</i>, Republic Day, Law No. 5816 and six more. Text encoded in TEI, rendered with XSLT, converted to RDF in Python, every entity matched to Wikidata.</p>
+        <p class="proj-tools">TEI/XML, XSLT, RDF, Python, Wikidata</p>
+        <a class="proj-link" href="https://kubrato.github.io/KnowledgeRepresentation-Organization/">Project site</a>
+      </article>
+
+      <article class="proj">
+        <p class="proj-meta">METU &middot; team lead, 4 people &middot; 2023 to 2024</p>
+        <h3>SH-Center</h3>
+        <p>A platform where students share course materials and get summaries and quizzes pitched at their level. I wrote the project charter (requirements, risks, an agile plan based on PMI), the progress reports and the competition applications. It was accepted into the ETKİM İSTASYON pre-incubation and incubation programme, run by the Ministry of Education with METU Teknokent.</p>
+        <p class="proj-tools">Requirements, risk analysis, project planning</p>
+      </article>
+
+      <article class="proj">
+        <p class="proj-meta">Knowledge Representation and Extraction course &middot; team of 4 &middot; in progress</p>
+        <h3>One story, four cultures</h3>
+        <p>Cinderella is <i>Aschenputtel</i> in Grimm and <i>La gatta Cenerentola</i> in Basile. Our team is Japanese, Italian, German and Turkish, so we're building a knowledge graph that links versions of the same tale type across our countries, from competency questions to an ontology and SPARQL tests.</p>
+        <p class="proj-tools">Ontology design, RDF, SPARQL</p>
+        <a class="proj-link" href="https://github.com/Kubrato/KRKE">Repository</a>
+      </article>
+    </div>
+
+    <p class="also">Also: <a href="https://kubrato.github.io/Web_Tech/">Istanbul on Film</a>, a small online exhibition about five foreign films shot in Istanbul between 1963 and 2016.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="wrap section skills-section">
+    <p class="kicker">Tools and methods</p>
+    <ul class="skills">
+      <li><strong>Analysis</strong> requirements, BPMN, UML, process mining, SDLC documents, Agile and waterfall, Jira</li>
+      <li><strong>Data and AI</strong> Python (PM4Py, NetworkX), SQL, LLM prompting and agent design, Gephi, SPSS</li>
+      <li><strong>Linked data</strong> RDF, SPARQL, TEI/XML, XSLT, Wikidata</li>
+      <li><strong>Web</strong> HTML/CSS, JavaScript, React, Angular, REST APIs, Postman, Git</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer id="contact" class="contact">
+  <div class="wrap">
+    <p class="contact-big">Write to me at <a href="mailto:kubra34644@gmail.com">kubra34644@gmail.com</a></p>
+    <p class="contact-phone">or call <a href="tel:+393520073732">+39 352 007 3732</a></p>
+    <p class="contact-links">
+      <a href="https://www.linkedin.com/in/k%C3%BCbra-top%C3%A7uo%C4%9Flu">LinkedIn</a>
+      <a href="https://github.com/Kubrato">GitHub</a>
+      <a href="cv.pdf">CV (PDF)</a>
+    </p>
+    <p class="small">Kübra Topçuoğlu, Bologna. Updated November 2026.</p>
+  </div>
+</footer>
+
+</body>
+</html>
